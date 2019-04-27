@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import moment from 'moment';
 import { FontAwesome } from '@expo/vector-icons';
 import { client } from '../../services/client';
 import gql from 'graphql-tag';
 import i18n from 'i18n-js';
 import { getTranslatedDistanceFromEnum } from '../../util';
+import AutoHeightImage from 'react-native-auto-height-image';
 
 export default class PostComponent extends React.Component<PostComponentProps, PostComponentState> {
   constructor(props: PostComponentProps) {
@@ -121,6 +122,11 @@ export default class PostComponent extends React.Component<PostComponentProps, P
             </Text>
           </View>
         </View>
+        <View>
+          {this.state.post.photoURL?  
+          <AutoHeightImage width={Dimensions.get('window').width} source={{ uri: this.state.post.photoURL }} style={styles.postPhoto} />
+        :null}
+        </View>
       </View>)
   }
 }
@@ -128,6 +134,9 @@ export default class PostComponent extends React.Component<PostComponentProps, P
 const styles = StyleSheet.create({
   postBody: {
     flexDirection: 'row',
+  },
+  postPhoto: {
+    width: '100%',
   },
   container: { 
     backgroundColor: '#fff',

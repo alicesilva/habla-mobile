@@ -1,9 +1,9 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 12398,
-  "expoServerNgrokUrl": "https://cs-2bu.anonymous.habla-mobile.exp.direct",
-  "packagerNgrokUrl": "https://packager.cs-2bu.anonymous.habla-mobile.exp.direct",
-  "ngrokPid": 12444,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002
 }
